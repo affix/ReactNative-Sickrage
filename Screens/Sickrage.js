@@ -31,6 +31,10 @@ export default class Sickrage extends React.Component {
 
   componentDidMount() {
     data = SickrageApi.fetchData();
+    if(data == null)
+    {
+      console.log("Error fetching data");
+    }
     this.setState({
       dataSource: this.state.dataSource.cloneWithRows(data),
       loaded: true,
@@ -60,6 +64,10 @@ export default class Sickrage extends React.Component {
     );
   }
   renderShow(show) {
+    if(show == null)
+    {
+      show = {"show_name": "ERROR RETREIVING DATA", "AIRDATE": "0000-00-00"}
+    }
     return (
       <View style={SharedStyles.container}>
         <View style={SharedStyles.rightContainer}>
