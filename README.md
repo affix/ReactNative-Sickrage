@@ -5,7 +5,6 @@ This app is very WIP and is free for all to use / copy / modify.
 
 API Key provided is a sample and will not work. Please configure your sickbeard/rage installation in Classes/SickrageApi.js
 
-
 # Running on ios
 NOTE: You must have xcode installed on your mac!
 
